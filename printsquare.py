@@ -14,4 +14,3 @@ for i in range(num):
     string.append(element)
 result=square(string)
 print(result)
-

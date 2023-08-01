@@ -3,7 +3,7 @@ class bank:
         self.money = amt
     def deposit_amt(self):
         self.depo=float(input("Enter the amount you want to deposit:"))
-        self.money=self.money+self.depo
+        self.money+=self.depo
         return self.money
 
     def withdraw_amt(self):
@@ -19,7 +19,7 @@ person1=bank(float(15000))
 person2=bank(float(20000))
 person3=bank(float(35000))
 while(True):
-    print("Select user\n1.User1\n2.Uer2\n3.User3")
+    print("Select user\n1.User1\n2.User2\n3.User3")
     choice=int(input("Enter your choice:"))
     if choice==1:
         person= person1
@@ -29,7 +29,7 @@ while(True):
         person=person3
         
     while (True):
-        print("1: Account Balance \n2: Money Deposit \n3: Money Withdrawal \n4: Exit")
+        print("Enter the operation you want to perform\n1: Account Balance \n2: Money Deposit \n3: Money Withdrawal \n4: Exit")
         choice=int(input("Enter your choice:"))
         if(choice==1):
             print("Your current bank balance is:",person.money)

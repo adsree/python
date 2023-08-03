@@ -1,13 +1,19 @@
-class student:
-    def __init__(self, name,rollno):
+class student1:
+    def __init__(self, name,rolln,age,mark):
         self.name=name
-        self.rollno=rollno
+        self.rolln=rolln
+        self.age1=age
+        self.mark1=mark
     def display(self):
-        pin=int(input("Enter the roll number of the student"))
+        print("Name of student is",i.name,"\nRoll number of student is",i.rolln,"\nAge of student is",i.age1,"\nMark of student is",i.mark1)
         
     def age(self):
-        age=(input("Enter the age of  student:"))
-        return age
+        self.age1=(input("Enter the age of  student:"))
+        return self.age1
+    
+    def mark(self):
+        self.mark1=(input("Enter the mark of  student:"))
+        return self.mark1
 
 
 new=[]
@@ -16,35 +22,51 @@ while True:
     ch=int(input("Enter the choice:"))
     if ch==1:
         name=input("Enter the name of student")
-        rollno=int(input("Enter the roll no of the student"))
-        account=bank(name,acno,bal)
-        new.append(account)
-        print("Account created sucessfully, Your current balance is",account.bal)
-       
+        rolln=int(input("Enter the roll no of the student"))
+        age,mark=None,None
+        student=student1(name,rolln,age,mark)
+        new.append(student)
+        print("Name of the registered student is",student.name,"\nRoll number of the registered student is",student.rolln)
+    
     elif ch==2:
         pin=int(input("Enter your pin number"))
         for i in new:
-            if i.pin == pin:
-                print("Welcome" ,i.name,", Your current bank balance is:",i.bal)
-    elif ch==3:
-        pin=int(input("Enter your pin number"))
-        for i in new:
-            if i.pin == pin:
-                i.bal = account.deposit()
-                print("Deposit successful. Your current account balance is",i.bal)
+            if i.rolln == pin:
+                i.display()        
             else:
                 print("You have entered wrong pin number")
                 exit()
+       
+    # elif ch==2:
+    #     num=int(input("Enter the roll no of the registered student"))
+    #     found = False
+    #     for i in new:
+    #         if i.rolln == num:
+    #             i.display()
+    #             found = True
+                
+            # if not found:
+            #     print("You have entered wrong roll number")
+
+    elif ch==3:
+        pin=int(input("Enter the roll no of the student"))
+        for i in new:
+            if i.rolln == pin:
+                i.age1 = i.age()
+                print("The age of the student is succesfully updated")
+                i.display()
+            else:
+                print("You have entered wrong roll number")
     
     elif ch==4:
-        pin=int(input("Enter your pin number"))
+        pin=int(input("Enter the roll no of the student"))
         for i in new:
-            if i.pin == pin:
-                i.bal = account.withdraw()
-                print("Withdrawal successful. Your current account balance is" ,i.bal)
+            if i.rolln == pin:
+                i.mark1 = i.mark()
+                print("The mark of the student is succesfully updated")
+                i.display()
             else:
-                print("You have entered wrong pin number")
-                exit()
+                print("You have entered wrong roll number")
         
     elif ch==5:
         print("Exiting")

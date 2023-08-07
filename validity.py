@@ -14,3 +14,5 @@ str1=string(n)
 n.isalpha()
 str1.check()                                        
         
+        
+        

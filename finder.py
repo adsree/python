@@ -1,6 +1,6 @@
 import re 
 
-s="hii bie chai letter lofie toffee tiffin food chick"
-x=re.findall(r'[a-z]{3,4}',s)
+s="hi bip chai letter lofie toffee tiffin food chick"
+x=re.findall(r'\b[a-z]{3,4}\b',s)
 
 print(x)

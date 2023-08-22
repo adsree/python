@@ -7,3 +7,4 @@ while j<=i:
         k-=1
     print()
     j+=1
+    

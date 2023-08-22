@@ -1,5 +1,5 @@
 import re
-expression= r'^[a-zA-Z0-9,_]{8,}$'
+expression= r'^[a-z+A-Z+0-9+_]{8,}$'
 pass1="helowo0098"
 match = re.match(expression,pass1)
              

@@ -1,5 +1,6 @@
 class InvalidRange(Exception):
     pass
+
 try:
     marks= input("Enter marks")
     marks=int(marks)

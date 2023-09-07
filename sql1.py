@@ -10,8 +10,8 @@ print("connection established")
 # con.execute("INSERT INTO EMPLOYEE VALUES (1006,'Steve',3,4500,'FINANCE','Mumbai')")
 # con.execute("INSERT INTO EMPLOYEE VALUES (1007,'Alice',3,3500,'FINANCE','Mumbai')")
 
-x=con.execute("update EMPLOYEE set Dname = 'Software' where EmployeeID = 1006")
-x=con.execute("SELECT * FROM EMPLOYEE")
+# x=con.execute("update EMPLOYEE set Dname = 'Software' where EmployeeID = 1006")
+x=con.execute("SELECT * FROM users")
 for i in x:
     print(i)
 con.commit()
